@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Telegram Bot Runner</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fb; margin: 0; }
+    .navbar { background: #1976d2; color: #fff; padding: 14px 0; display: flex; justify-content: center; gap: 40px; }
+    .navbar a { color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; padding: 6px 14px; border-radius: 3px; transition: background 0.2s; }
+    .navbar a:hover { background: #1565c0; }
+    .dashboard-container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px #0001; padding: 32px 24px; }
+    .dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+    .dashboard-header h2 { color: #1976d2; margin: 0; font-size: 2rem; }
+    .add-bot-btn { background: #1976d2; color: #fff; border: none; border-radius: 4px; padding: 10px 22px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .add-bot-btn:hover { background: #1565c0; }
+    .bot-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .bot-card { background: #f1f6fa; border-radius: 8px; box-shadow: 0 1px 4px #0001; padding: 22px 18px; display: flex; flex-direction: column; align-items: flex-start; }
+    .bot-title { font-size: 1.2rem; font-weight: 600; color: #1976d2; margin-bottom: 8px; }
+    .bot-status { font-size: 0.98rem; margin-bottom: 14px; color: #388e3c; }
+    .bot-actions { display: flex; gap: 10px; }
+    .bot-actions button { background: #1976d2; color: #fff; border: none; border-radius: 3px; padding: 7px 14px; font-size: 0.98rem; cursor: pointer; transition: background 0.2s; }
+    .bot-actions button:hover { background: #1565c0; }
+    .bot-actions .stop { background: #e53935; }
+    .bot-actions .stop:hover { background: #b71c1c; }
+    .bot-actions .logs { background: #757575; }
+    .bot-actions .logs:hover { background: #424242; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="tools.html">Tools</a>
+    <a href="#" style="margin-left:auto;">Logout</a>
+  </nav>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h2>Your Bots</h2>
+      <a href="add-bot.html" class="add-bot-btn">+ Add New Bot</a>
+    </div>
+    <div class="bot-list">
+      <!-- Example Bot Card -->
+      <div class="bot-card">
+        <div class="bot-title">My News Bot</div>
+        <div class="bot-status">Status: <span style="color:#388e3c;">Running</span></div>
+        <div class="bot-actions">
+          <button class="stop">Stop</button>
+          <button class="logs">Logs</button>
+        </div>
+      </div>
+      <div class="bot-card">
+        <div class="bot-title">Weather Updates</div>
+        <div class="bot-status">Status: <span style="color:#e53935;">Stopped</span></div>
+        <div class="bot-actions">
+          <button>Start</button>
+          <button class="logs">Logs</button>
+        </div>
+      </div>
+      <!-- Add more bot cards as needed -->
+    </div>
+  </div>
+</body>
+</html> 

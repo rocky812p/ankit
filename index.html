@@ -1,0 +1,69 @@
+<head>
+  <!-- ... existing head content ... -->
+  <style>
+    #running-animation {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      min-height: 120px;
+    }
+    #running-animation svg {
+      max-width: 180px;
+      height: auto;
+      animation: move-runner 3s linear infinite;
+    }
+    @keyframes move-runner {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(60vw); }
+    }
+    /* Arm and leg running animation */
+    #arm-left { transform-origin: 32px 37px; animation: arm-left-run 0.6s ease-in-out infinite alternate; }
+    #arm-right { transform-origin: 57px 37px; animation: arm-right-run 0.6s ease-in-out infinite alternate; }
+    #leg-left { transform-origin: 38.5px 62px; animation: leg-left-run 0.6s ease-in-out infinite alternate; }
+    #leg-right { transform-origin: 46.5px 62px; animation: leg-right-run 0.6s ease-in-out infinite alternate; }
+    @keyframes arm-left-run {
+      0% { transform: rotate(-30deg); }
+      100% { transform: rotate(30deg); }
+    }
+    @keyframes arm-right-run {
+      0% { transform: rotate(30deg); }
+      100% { transform: rotate(-30deg); }
+    }
+    @keyframes leg-left-run {
+      0% { transform: rotate(30deg); }
+      100% { transform: rotate(-30deg); }
+    }
+    @keyframes leg-right-run {
+      0% { transform: rotate(-30deg); }
+      100% { transform: rotate(30deg); }
+    }
+  </style>
+</head>
+<div id="running-animation">
+  <!-- Running human SVG animation -->
+  <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="runner">
+      <circle id="head" cx="40" cy="20" r="10" fill="#1976d2"/>
+      <rect id="body" x="35" y="30" width="10" height="30" rx="5" fill="#1976d2"/>
+      <rect id="arm-left" x="25" y="35" width="15" height="5" rx="2.5" fill="#1976d2"/>
+      <rect id="arm-right" x="50" y="35" width="15" height="5" rx="2.5" fill="#1976d2"/>
+      <rect id="leg-left" x="35" y="60" width="7" height="25" rx="3.5" fill="#1976d2"/>
+      <rect id="leg-right" x="43" y="60" width="7" height="25" rx="3.5" fill="#1976d2"/>
+    </g>
+  </svg>
+</div>
+
+<section id="hero" style="text-align:center; margin-bottom:40px;">
+  <h1 style="font-size:2.5rem; color:#1976d2; margin-bottom:10px;">Telegram Bot Runner</h1>
+  <p style="font-size:1.2rem; color:#333; margin-bottom:25px;">Run your Telegram bots 24x7 for free, with modern tools and beautiful UI.</p>
+  <button style="background:#fff; color:#1976d2; border:1px solid #1976d2; border-radius:4px; padding:10px 20px; font-size:1rem; cursor:pointer; margin-bottom:15px; display:inline-flex; align-items:center; gap:8px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" style="width:22px; height:22px; vertical-align:middle;"> Sign in with Google
+  </button>
+  <br>
+  <a href="dashboard.html" style="display:inline-block; margin-top:10px; background:#1976d2; color:#fff; padding:10px 28px; border-radius:4px; text-decoration:none; font-size:1.1rem;">Go to Dashboard</a>
+</section>
+
+<!-- ... existing homepage content ... --> 
